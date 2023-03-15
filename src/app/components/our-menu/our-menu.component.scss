@@ -11,6 +11,12 @@
   position: relative;
   padding-top: 2em;
   overflow: hidden;
+  .planet-counter{
+    a{
+      text-decoration: none;
+      color: white;
+    }
+  }
   .planet-counter:nth-child(1){
     display: flex;
     justify-content: start;
