@@ -1,18 +1,21 @@
-import { Component, ElementRef  } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-
 export class AppComponent {
   title = 'PequeStarsProject';
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef) {}
 
   scrollToMenu() {
     const element = this.elementRef.nativeElement.querySelector('#our-menu');
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  scrollToCine() {
+    const element = this.elementRef.nativeElement.querySelector('#cine');
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
   scrollToAbout() {
@@ -24,4 +27,3 @@ export class AppComponent {
     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 }
-
